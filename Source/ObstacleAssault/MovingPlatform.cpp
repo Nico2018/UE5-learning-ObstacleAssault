@@ -20,19 +20,21 @@ void AMovingPlatform::BeginPlay()
 }
 
 void AMovingPlatform::Move(float DeltaTime) {
-
-	FVector CurrentLocation = GetActorLocation();
-	if (FVector::Dist(CurrentLocation, Spawn) > 1000) {
-		Speed = -Speed;
-		Spawn = CurrentLocation;
-	}
-	FVector TranslateLocation = (MovementRate * Speed * DeltaTime);
-
 	
+	FVector CurrentLocation = GetActorLocation();
+	float DistanceMoved = FVector::Dist(CurrentLocation, Spawn);
 
-	CurrentLocation += TranslateLocation;
 
-	SetActorLocation(CurrentLocation);
+	if (DistanceMoved <= MoveDistance) {
+		CurrentLocation += (MovementRate * DeltaTime);
+		SetActorLocation(CurrentLocation);
+	}
+	else {
+		Spawn = Spawn + (MovementRate.GetSafeNormal() * MoveDistance);
+		SetActorLocation(Spawn);
+		MovementRate = -MovementRate;
+	}
+
 }
 
 // Called every frame

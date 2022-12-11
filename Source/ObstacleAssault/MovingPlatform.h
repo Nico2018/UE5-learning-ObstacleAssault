@@ -12,7 +12,7 @@ class OBSTACLEASSAULT_API AMovingPlatform : public AActor
 	GENERATED_BODY()
 
 private:
-	bool MoveFoward= true;
+	
 	void Move(float DeltaTime);
 
 public:	
@@ -27,11 +27,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(EditAnywhere, Category="Platform Movement")
-	float Speed = 1;
+	UPROPERTY(EditAnywhere, Category = "Platform Movement")
+	float MoveDistance = 1000;
 
 	UPROPERTY(EditAnywhere, Category = "Platform Movement")
-	FVector MovementRate = FVector(0,1,0);
+	FVector MovementRate = FVector(10,10,10);
 
 	UPROPERTY(EditAnywhere)
 	FVector Spawn = FVector(-14283, -2464, 4027);
