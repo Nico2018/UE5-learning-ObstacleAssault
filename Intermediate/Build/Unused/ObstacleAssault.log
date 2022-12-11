@@ -1,7 +1,0 @@
-﻿  Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" ObstacleAssaultEditor Win64 Development -Project="C:\Users\Npere\OneDrive\Documentos\Unreal Projects\ObstacleAssault\ObstacleAssault.uproject" -WaitMutex -FromMsBuild
-  Log file: C:\Users\Npere\AppData\Local\UnrealBuildTool\Log.txt
-  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Npere\OneDrive\Documentos\Unreal Projects\ObstacleAssault).
-  Waiting for 'git status' command to complete
-  Terminating git child process due to timeout
-  Target is up to date
-  Total execution time: 55.63 seconds
