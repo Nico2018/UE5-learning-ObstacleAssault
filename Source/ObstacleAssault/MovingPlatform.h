@@ -34,6 +34,6 @@ public:
 	FVector MovementRate = FVector(10,10,10);
 
 	UPROPERTY(EditAnywhere)
-	FVector Spawn = FVector(-14283, -2464, 4027);
+	FVector Spawn = FVector(0, 0, 0);
 	
 };

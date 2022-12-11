@@ -15,7 +15,7 @@ AMovingPlatform::AMovingPlatform()
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	Spawn = GetActorLocation();
 	SetActorLocation(Spawn);
 }
 
