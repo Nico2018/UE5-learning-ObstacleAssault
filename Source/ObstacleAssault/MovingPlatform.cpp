@@ -37,11 +37,18 @@ void AMovingPlatform::Move(float DeltaTime) {
 
 }
 
+void AMovingPlatform::Rotate(float DeltaTime) {
+	FRotator CurrentRotation = GetActorRotation();
+	CurrentRotation += RotationRate * DeltaTime;
+	SetActorRotation(CurrentRotation);
+}
+
 // Called every frame
 void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	Move(DeltaTime);
+	Rotate(DeltaTime);
 
 }
 

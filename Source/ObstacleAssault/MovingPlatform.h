@@ -14,6 +14,7 @@ class OBSTACLEASSAULT_API AMovingPlatform : public AActor
 private:
 	
 	void Move(float DeltaTime);
+	void Rotate(float DeltaTime);
 
 public:	
 	// Sets default values for this actor's properties
@@ -32,6 +33,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Platform Movement")
 	FVector MovementRate = FVector(10,10,10);
+
+	UPROPERTY(EditAnywhere, Category = "Platform Movement")
+	FRotator RotationRate = FRotator(0, 0, 0);
 
 	UPROPERTY(EditAnywhere)
 	FVector Spawn = FVector(0, 0, 0);
